@@ -1,7 +1,10 @@
 #Calculadora que pergunta;
 
 continuar = "s"
-armazena = [0,1,2,3,4,5,6,7,8]
+armazenaa = 00
+armazenab = 00
+armazenac = 00
+armazenad = 00
 
 while continuar == "s" or continuar == "S":
     print("Entre com os parâmetros solicitados.")
@@ -10,24 +13,28 @@ while continuar == "s" or continuar == "S":
     n1 = float(input("Digite o valor correspondente ao segundo dado da operação: "))
     if operacao == "+":
         resultado = n + n1
-        armazena[0] = resultado
-        print(resultado)
+        armazenaa = resultado
 
     if operacao == "-":
         resultado = n - n1
-        armazena[1] = resultado
-        print(resultado)
+        armazenab = resultado
 
     if operacao == "*":
         resultado = n * n1
-        armazena[2] = resultado
-        print(resultado)
+        armazenac = resultado
 
     if operacao == "/":
         resultado = n / n1
-        aramazena[3] = resultado
-        print(resultado)
+        armazenad = resultado
 
     continuar = input("Deseja fazer alguma outra operação? [n] não, [s]sim ")
-print("O resultado das oprações foram", armazena[1], "resultado da soma, ", armazena[0], "resultado da subtração",
-armazena[2], "resultado da multiplicação e ", armazena[4], "resultado da divisão")
+
+if armazenaa != 0:
+    print("Este é o resultado da soma:", armazenaa)
+elif armazenab != 0:
+    print("Este é o resultado da subtração:", armazenab)
+elif armazenac != 0:
+    print("Este é o resultado da multiplicação:", armazenac)
+elif armazenad!= 0:
+    print("Este é o resultado da divisão:", armazenad)
+
