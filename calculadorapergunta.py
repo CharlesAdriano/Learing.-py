@@ -1,40 +1,35 @@
 #Calculadora que pergunta;
 
 continuar = "s"
-armazenaa = 00
-armazenab = 00
-armazenac = 00
-armazenad = 00
+resultadoSoma = -1
+resultadoSub = -1
+resultadoMul = -1
+resultadoDiv = -1
 
 while continuar == "s" or continuar == "S":
     print("Entre com os parâmetros solicitados.")
     operacao = input("[+, -, *, /] , escolha o sinal conforme a operação: ")
-    n = float(input("Digite o valor correspondente ao primeiro dado da operação: "))
-    n1 = float(input("Digite o valor correspondente ao segundo dado da operação: "))
+    numero1 = float(input("Digite o valor correspondente ao primeiro dado da operação: "))
+    numero2 = float(input("Digite o valor correspondente ao segundo dado da operação: "))
     if operacao == "+":
-        resultado = n + n1
-        armazenaa = resultado
+        resultadoSoma = numero1 + numero2
 
-    if operacao == "-":
-        resultado = n - n1
-        armazenab = resultado
+    elif operacao == "-":
+        resultadoSub = numero1 - numero2
 
-    if operacao == "*":
-        resultado = n * n1
-        armazenac = resultado
+    elif operacao == "*":
+        resultadoMul = numero1 * numero2
 
-    if operacao == "/":
-        resultado = n / n1
-        armazenad = resultado
+    else:
+        resultadoDiv = numero1 / numero2
 
     continuar = input("Deseja fazer alguma outra operação? [n] não, [s]sim ")
 
-if armazenaa != 0:
-    print("Este é o resultado da soma:", armazenaa)
-elif armazenab != 0:
-    print("Este é o resultado da subtração:", armazenab)
-elif armazenac != 0:
-    print("Este é o resultado da multiplicação:", armazenac)
-elif armazenad!= 0:
-    print("Este é o resultado da divisão:", armazenad)
-
+if resultadoSoma != -1:
+    print("O resultado da soma é: ", resultadoSoma)
+if resultadoSub != -1:
+    print("O resultado da subtração é: ", resultadoSub)
+if resultadoMul != -1:
+    print("O resultado da multiplicação é: ", resultadoMul)
+if resultadoDiv != -1:
+    print("O resultado da divisão é: ", resultadoDiv)
