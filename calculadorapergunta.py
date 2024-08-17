@@ -23,13 +23,15 @@ while continuar == "s" or continuar == "S":
     else:
         resultadoDiv = numero1 / numero2
 
+    if resultadoSoma != -1:
+        print("O resultado da soma é: ", resultadoSoma)
+    if resultadoSub != -1:
+        print("O resultado da subtração é: ", resultadoSub)
+    if resultadoMul != -1:
+        print("O resultado da multiplicação é: ", resultadoMul)
+    if resultadoDiv != -1:
+        print("O resultado da divisão é: ", resultadoDiv)
+
     continuar = input("Deseja fazer alguma outra operação? [n] não, [s]sim ")
 
-if resultadoSoma != -1:
-    print("O resultado da soma é: ", resultadoSoma)
-if resultadoSub != -1:
-    print("O resultado da subtração é: ", resultadoSub)
-if resultadoMul != -1:
-    print("O resultado da multiplicação é: ", resultadoMul)
-if resultadoDiv != -1:
-    print("O resultado da divisão é: ", resultadoDiv)
+
